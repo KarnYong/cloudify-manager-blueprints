@@ -90,6 +90,7 @@ fi
 
 ctx logger info "Copying role configuration files..."
 deploy_blueprint_resource "${REST_RESOURCES_REL_PATH}/roles_config.yaml" "${REST_SERVICE_HOME}/roles_config.yaml"
+deploy_blueprint_resource "${REST_RESOURCES_REL_PATH}/user_roles.yaml" "${REST_SERVICE_HOME}/user_roles.yaml"
 
 deploy_logrotate_config "restservice"
 
