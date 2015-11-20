@@ -1,0 +1,6 @@
+bob:
+    roles: [deployer]
+claire:
+    roles: [viewer]
+admin:
+    roles: [administrator]
