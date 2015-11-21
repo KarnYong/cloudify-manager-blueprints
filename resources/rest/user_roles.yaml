@@ -1,5 +1,5 @@
-bob:
-    roles: [deployer]
+bobm:
+    roles: [administrator]
 claire:
     roles: [viewer]
 admin:
