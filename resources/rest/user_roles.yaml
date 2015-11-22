@@ -1,4 +1,4 @@
-bobm:
+bobm@cfytest.com:
     roles: [administrator]
 claire:
     roles: [viewer]
