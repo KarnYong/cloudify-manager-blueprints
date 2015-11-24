@@ -9,8 +9,7 @@ echo "Installing rest service plugins"
 
     echo "Installing {{ name }} plugin in rest service virtual environment"
 
-    extract_plugin_script="\
-    import sys;\
+    extract_plugin_script="import sys;\
     from cloudify_agent.api.plugins.installer import extract_package_to_dir;\
     sys.stdout.write(extract_package_to_dir('{{ plugin.source }}'));\
     "
@@ -19,6 +18,7 @@ echo "Installing rest service plugins"
 
     pushd ${plugin_dir}
         if [ ! -f setup.py ]; then
+            # install wagon plugin
             sudo $VENV/bin/pip install {{ plugin.install_args }}
         else
             sudo $VENV/bin/pip install . {{ plugin.install_args }}
