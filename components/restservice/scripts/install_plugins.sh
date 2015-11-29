@@ -17,7 +17,7 @@ echo "Installing rest service plugins"
     plugin_dir=$(python -c "${extract_plugin_script}")
 
     pushd ${plugin_dir}
-        if [ ! -f setup.py ]; then
+        if [[ {{ plugin.source }} == *.wgn ]]; then
             # install wagon plugin
             sudo $VENV/bin/pip install {{ plugin.install_args }}
         else
