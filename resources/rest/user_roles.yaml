@@ -1,6 +1,0 @@
-bobm@cfytest.com:
-    roles: [administrator]
-claire:
-    roles: [viewer]
-admin:
-    roles: [administrator]
